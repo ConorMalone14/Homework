@@ -9,6 +9,9 @@ public class Main {
         //p.printArray(Methods.getFibonacci(10));
         //p.printArray(Methods.bubbleSort(array));
         //p.printArray(Methods.getRecursiveFibonacci(5));
-        p.printArray(Methods.getRecursiveFibonacciWithEvenMoreRecursion(1));
+        //p.printArray(Methods.getRecursiveFibonacciWithEvenMoreRecursion(10));
+        System.out.println(Methods.isPalindrome("racecar"));
+        System.out.println(Methods.isPalindrome("racecars"));
+        System.out.println(Methods.findLongestPalindromeRecursively("I wanted to test this on a random sentence"));
     }
 }
