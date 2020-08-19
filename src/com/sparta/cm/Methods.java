@@ -50,5 +50,34 @@ public class Methods {
         System.out.println("no of swaps: " + totalSwaps);
         return array;
     }
+    private static int getRecursiveIntFib(int num){
+        if (num==1){
+            return 1;
+        }else if(num==0){
+            return 0;
+        }else{
+            return getRecursiveIntFib(num-1) + getRecursiveIntFib(num-2);
+        }
+
+    }
+    public static int[] getRecursiveFibonacci(int sequenceLength){
+        int[] sequence = new int[sequenceLength];
+        for(int i= sequenceLength-1;i>=0;i--){
+            sequence[i]=getRecursiveIntFib(i);
+        }
+        return sequence;
+    }
+    public static int[] getRecursiveFibonacciWithEvenMoreRecursion(int sequenceLength){
+        int[] sequence = new int[sequenceLength];
+        recur(sequenceLength-1, sequence);
+        return sequence;
+    }
+    private static int[] recur(int numOfSequence, int[] sequence){
+        if (numOfSequence>=0) {
+            sequence[numOfSequence] = getRecursiveIntFib(numOfSequence);
+            recur (numOfSequence - 1, sequence);
+        }
+        return sequence;
+    }
 
 }
