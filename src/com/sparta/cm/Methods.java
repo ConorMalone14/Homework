@@ -5,18 +5,13 @@ public class Methods {
     public int[] getFibonacci(int numberOfSequence){
         int[] sequence = new int[numberOfSequence];
 
-        int first = 0;
-        int second = 1;
         for(int position = 0; position<numberOfSequence;position++){
             if(position == 0){
-                sequence[0]=first;
+                sequence[0]=0;
             }else if(position==1){
-                sequence[1]=second;
+                sequence[1]=1;
             }else{
-                sequence[position]= first+second;
-                int temp = second;
-                second = first + second;
-                first = temp;
+                sequence[position]= sequence[position-1]+sequence[position-1];
 
             }
 
