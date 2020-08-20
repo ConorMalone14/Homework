@@ -1,10 +1,12 @@
 package com.sparta.cm;
 
+import com.sparta.cm.fibonacci.Fibonacci;
+
 public class Printer {
 
     public void fibonacci(int numberOfSequence){
-        Methods m = new Methods();
-        int[] output = m.getFibonacci(numberOfSequence);
+
+        int[] output = Fibonacci.getFibonacci(numberOfSequence);
         for(int position = 0; position<numberOfSequence; position++) {
             System.out.println("Position:" + position + " Output:" + output[position]);
         }
